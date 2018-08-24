@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/delirius325/axios-curlirize.svg?style=svg)](https://circleci.com/gh/delirius325/axios-curlirize)
+[![CircleCI](https://circleci.com/gh/delirius325/create-babel-project.svg?style=svg)](https://circleci.com/gh/delirius325/create-babel-project)
 
 # Description
 This module is meant to make the process of setting up a Babel project easy and fast. 
