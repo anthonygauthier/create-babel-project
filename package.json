@@ -11,6 +11,10 @@
   "bin": {
     "create-babel-project": "./index.js"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/delirius325/create-babel-project"
+  },
   "keywords": [
     "babel",
     "create",
