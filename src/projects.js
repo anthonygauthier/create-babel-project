@@ -7,7 +7,7 @@ import logger from 'fancy-log';
 let createNewProject = async path => {
   return new Promise((resolve, reject) => {
     const preset = {
-      "presets": ["env"]
+      "presets": ["latest"]
     };
     //remove slash if present at last character - makes it easier to read paths in code afterwards
     path = (path.charAt(path.length - 1) === '/') ? path.substr(0, path.length - 1) : path;
@@ -28,7 +28,7 @@ let createNewProject = async path => {
       modulePromise(path, 'babel-cli'),
       modulePromise(path, 'babel-core'),
       modulePromise(path, 'babel-polyfill'),
-      modulePromise(path, 'babel-preset-env'),
+      modulePromise(path, 'babel-preset-latest'),
       modulePromise(path, 'mocha')
     ];
 

@@ -15,3 +15,9 @@ Then create your project :smile: !
 # create-babel-project <command> [options]
 create-babel-project new -p ~/hello-world
 ```
+
+## Available commands and options
+| commands | options                                                |
+|----------|--------------------------------------------------------|
+| new      | --path,p (the path of the new project, must not exist) |
+

@@ -24,7 +24,7 @@ describe('Testing the project creation', function() {
     expect(packageJSON.dependencies["babel-cli"]).toBeDefined();
     expect(packageJSON.dependencies["babel-core"]).toBeDefined();
     expect(packageJSON.dependencies["babel-polyfill"]).toBeDefined();
-    expect(packageJSON.dependencies["babel-preset-env"]).toBeDefined();
+    expect(packageJSON.dependencies["babel-preset-latest"]).toBeDefined();
     expect(packageJSON.dependencies["mocha"]).toBeDefined();
     done();
   });
@@ -37,18 +37,13 @@ describe('Testing the project creation', function() {
     done();
   });
 
-  // it('should verify that all packages were properly installed', (done) => {
-  //   console.log(`${path}/node-modules/babel-cli`);
-  //   expect(fs.pathExistsSync(`${path}/node-modules/babel-cli`)).toBe(true);
-    // expect(fs.pathExistsSync(`${path}/node-modules/babel-core`)).toBe(true);
-    // expect(fs.pathExistsSync(`${path}/node-modules/babel-polyfill`)).toBe(true);
-    // expect(fs.pathExistsSync(`${path}/node-modules/babel-preset-env`)).toBe(true);
-    // expect(fs.pathExistsSync(`${path}/node-modules/mocha`)).toBe(true);
-  //   done();
-  // });
-
   it('should verify that the .babelrc file exists', (done) => {
     expect(fs.pathExistsSync(`${path}/.babelrc`)).toBe(true);
+    done();
+  });
+
+  it('should verify that the .babelrc preset is "latest"', (done) => {
+    expect(JSON.parse(fs.readFileSync(`${path}/.babelrc`))["presets"][0]).toBe("latest");
     done();
   });
 
