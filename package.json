@@ -1,6 +1,6 @@
 {
   "name": "create-babel-project",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Utility module to easily create a babel compiled project. This module will install the required modules and setup your project for you to get started and code your project with the help of Babel.",
   "main": "index.js",
   "scripts": {
